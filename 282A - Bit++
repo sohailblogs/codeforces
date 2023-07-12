@@ -1,0 +1,44 @@
+import java.util.Scanner;
+public class Main
+{
+  public static void main (String[]args)
+  {
+    Scanner obj = new Scanner (System.in);
+    Main m = new Main ();
+    int n = obj.nextInt ();
+    obj.nextLine ();
+    int change = 0;
+      String[] f = new String[n];
+    for (int i = 0; i < n; i++)
+      {
+	f[i] = obj.nextLine ();
+      }
+    int j = m.eval (change, f);
+    System.out.println (j);
+
+  }
+  public int eval (int change, String[]f)
+  {
+    for (int i = 0; i < f.length; i++)
+      {
+	if (f[i].equals("X++"))
+	  {
+	    change++;
+	  }
+	if (f[i].equals("X--"))
+	  {
+	    change--;
+	  }
+	if (f[i].equals("++X"))
+	  {
+	    change+= 1;
+	  }
+	if (f[i].equals("--X"))
+	  {
+	    change -= 1;
+	  }
+      }
+    return change;
+  }
+
+}
