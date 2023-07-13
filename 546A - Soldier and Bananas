@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class Main
+{
+  public static void main (String[]args)
+  {
+    Main obj = new Main ();
+    Scanner s = new Scanner (System.in);
+    int k = s.nextInt ();
+    int n = s.nextInt ();
+    int w = s.nextInt ();
+    int sum = 0;
+    for (int i = 1; i <= w; i++)
+      {
+	sum = sum + k * i;
+      }
+    if (n >= sum)
+      {
+	System.out.println (0);
+      }
+    else
+      {
+	System.out.println (sum - n);
+      }
+  }
+
+
+}
