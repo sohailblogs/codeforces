@@ -1,0 +1,58 @@
+import java.util.Scanner;
+
+public class Main
+{
+  public static void main (String[]args)
+  {
+    Main obj = new Main ();
+    Scanner s = new Scanner (System.in);
+    int t = s.nextInt();
+    int[] n = new int[t];
+    for(int i = 0; i < t; i++){
+        n[i] = s.nextInt();
+    }
+    for(int i = 0; i < t; i++){
+        if(n[i] % 2 == 0){
+            System.out.println((int)(n[i]/2 - 1));
+        }
+        else{
+            System.out.println((int)(n[i]/2));
+        }
+    }
+      
+  }
+}
+
+
+
+
+/*
+this exceeds the time limit
+import java.util.Scanner;
+
+public class Main
+{
+  public static void main (String[]args)
+  {
+    Main obj = new Main ();
+    Scanner s = new Scanner (System.in);
+    int t = s.nextInt();
+    int[] n = new int[t];
+    for(int i = 0; i < t; i++){
+        n[i] = s.nextInt();
+    }
+    for(int i = 0; i < t; i++){
+        int a = 1;
+        int b = n[i] - 1;
+        int count = 0;
+        while(b > a){
+            count++;
+            b--;
+            a++;
+        }
+        System.out.println(count);
+    }
+      
+  }
+}
+*/
