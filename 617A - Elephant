@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class Main
+{
+  public static void main (String[]args)
+  {
+    Main m = new Main ();
+    Scanner s = new Scanner (System.in);
+    int t = s.nextInt();
+    int cp = t;
+    int c = 0, g = 1;
+    
+    for(int i = 5; i > 0; i--){
+        int j = 1;
+        while(i*j <= t){
+            j++;
+            c++;
+        }
+        t = t - i*j;
+    }
+    if(cp % 5 == 0){System.out.println(cp/5);}
+    //if(cp == 5){System.out.println(g);}
+    else if(cp % 5 != 0){System.out.println(c+1);}
+  }
+}
