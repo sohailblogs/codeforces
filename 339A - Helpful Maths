@@ -1,0 +1,30 @@
+import java.util.Scanner;
+import java.util.Arrays;
+public class Main
+{
+  public static void main (String[]args)
+  {
+    Main m = new Main ();
+    Scanner s = new Scanner (System.in);
+    String t = s.nextLine();
+    char[] c = t.toCharArray();
+    /*for(int i = 0; i < c.length; i++){
+        System.out.print(c[i] + ", ");
+    }*/
+    //System.out.println("\n");
+    char[] d = t.toCharArray();
+    int count = 0;
+    for(int i = 0; i < c.length; i++){
+        if(c[i] == '+'){
+            count++;
+        }
+    }
+    //System.out.println(count);
+    Arrays.sort(d);
+    for(int i = count; i < c.length; i++){
+        System.out.print(d[i]);
+        if(i != c.length-1){System.out.print("+");}
+    }
+    
+  }
+}
