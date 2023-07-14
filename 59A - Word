@@ -1,0 +1,43 @@
+import java.util.Scanner;
+
+public class Main
+{
+  public static void main (String[]args)
+  {
+    Main m = new Main ();
+    Scanner s = new Scanner (System.in);
+    String t = s.nextLine();
+    char[]  c = t.toCharArray();
+    int up = m.isUp(c);
+    int down = m.isDown(c);
+    if(up > down){
+        System.out.println(t.toUpperCase());
+    }
+    if(up < down){
+        System.out.println(t.toLowerCase());
+    }
+    if(up == down){
+        System.out.println(t.toLowerCase());
+    }
+  }
+    public int isUp(char[] c){
+        int flag = 0;
+        for(int i = 0; i < c.length; i++){
+            char d = Character.toUpperCase(c[i]);
+            if(c[i] == d){
+                flag++;
+            }
+        }
+        return flag;
+    }
+    public int isDown(char[] c){
+        int flag = 0;
+        for(int i = 0; i < c.length; i++){
+            char d = Character.toLowerCase(c[i]);
+            if(c[i] == d){
+                flag++;
+            }
+        }
+        return flag;
+    }
+}
