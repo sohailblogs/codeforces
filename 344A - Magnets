@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        int n = s.nextInt();
+        s.nextLine(); // Consume the newline character after reading n
+
+        String[] d = new String[n];
+        for (int i = 0; i < n; i++) {
+            d[i] = s.nextLine();
+        }
+
+        /*for (int i = 0; i < d.length; i++) {
+            System.out.print(d[i]);
+            if (i < d.length - 1) {
+                System.out.print(", ");
+            }
+        }*/
+
+        int count = 0;
+        for (int i = 0; i < d.length - 1; i++) {
+            if (!d[i].equals(d[i + 1])) {
+                count++;
+            }
+        }
+        System.out.println();
+        System.out.println(count+1);
+    }
+}
