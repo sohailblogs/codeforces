@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        String q = s.next();
+        String y = s.next();
+        char[] a = q.toCharArray();
+        char[] l = y.toCharArray();
+        int count = 0;
+        for(int i = 0 , j = l.length - 1; i< a.length && j >=0; i++){
+            if(a[i] == l[j]){
+                count++;
+            }
+            j--;
+        }
+        if(count == a.length){
+            System.out.println("YES");
+        }
+        else{
+            System.out.println("NO");
+        }
+    }
+}
