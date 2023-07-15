@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        int d = s.nextInt();
+        String a = s.next();
+        char[] c = a.toCharArray();
+        int g = 0, count = 0;
+        for(int i = 0;i<c.length; i++){
+            if(c[i] == 'A'){
+                count++;
+            }
+            if(c[i] == 'D'){
+                g++;
+            }
+        }
+        if(g == count){
+            System.out.println("Friendship");
+        }
+        if(g < count){
+            System.out.println("Anton");
+        }
+        if(g > count){
+            System.out.println("Danik");
+        }
+    }
+}
