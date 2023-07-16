@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        int n = s.nextInt();
+        for(int i = 0; i < n; i++){
+            int a = s.nextInt();
+            int b = s.nextInt();
+            int c = s.nextInt();
+            int d = s.nextInt();
+            int max1 = (a > b)?a:b;
+            int min1 = (a < b)?a:b;
+            int max2 = (c > d)?c:d;
+            int min2 = (c < d)?c:d;
+            if(max1 < min2 || max2 < min1){
+                System.out.println("NO");
+            }
+            else{
+                System.out.println("YES");
+            }
+        }
+        
+        
+    }
+    
+}
