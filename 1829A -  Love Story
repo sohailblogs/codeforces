@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        int n = s.nextInt();
+        for(int i = 0; i < n; i++){
+            String e = s.next();
+            int count = 0;
+            if(e.charAt(0) != 'c'){count++;}
+            if(e.charAt(1) != 'o'){count++;}
+            if(e.charAt(2) != 'd'){count++;}
+            if(e.charAt(3) != 'e'){count++;}
+            if(e.charAt(4) != 'f'){count++;}
+            if(e.charAt(5) != 'o'){count++;}
+            if(e.charAt(6) != 'r'){count++;}
+            if(e.charAt(7) != 'c'){count++;}
+            if(e.charAt(8) != 'e'){count++;}
+            if(e.charAt(9) != 's'){count++;}
+            System.out.println(count);
+        }
+    }
+}
