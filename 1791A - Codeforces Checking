@@ -1,0 +1,19 @@
+import java.util.Scanner;
+import java.util.Arrays;
+public class Main {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in); 
+        int n = s.nextInt();
+        String[] a = new String[n];
+        for(int i = 0; i <n; i++){
+            a[i] = s.next();
+            if( a[i].equals("c") || a[i].equals("o") || a[i].equals("d") || a[i].equals("e") || a[i].equals("f") || a[i].equals("r") || a[i].equals("s")){
+                System.out.println("YES");
+            }
+            else{
+                System.out.println("NO");
+            }
+        }
+        
+    }
+}
