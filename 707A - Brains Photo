@@ -1,0 +1,29 @@
+import java.util.Scanner;
+import java.util.Arrays;
+public class Main {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in); 
+        int n = s.nextInt();
+        int m = s.nextInt();
+        String[][] a = new String[n][m];
+        for(int i = 0; i < n; i++){
+            for(int j = 0; j < m; j++){
+                a[i][j] = s.next();
+            }
+        }
+        boolean h = false;
+        for(int i = 0; i < n; i++){
+            for(int j = 0; j < m; j++){
+                if(a[i][j].equals("C") || a[i][j].equals("M")|| a[i][j].equals("Y") ){
+                h = true ;
+                break;
+                }
+            }
+        }
+        if(h){System.out.println("#Color");}
+            else{System.out.println("#Black&White");}
+        
+    
+        
+    }
+}
