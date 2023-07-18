@@ -1,0 +1,19 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        int n = s.nextInt();
+        while(n != 0){
+            String u = s.next();
+            if(u.length() <= 10){System.out.println(u);}
+            else{
+            System.out.println(u.charAt(0) + Integer.toString(u.length() - 2)+ u.charAt(u.length() - 1) );
+            }
+            n--;
+        }
+    
+        
+    }
+    
+}
