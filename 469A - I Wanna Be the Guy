@@ -1,0 +1,34 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        int n = s.nextInt();
+        int a = s.nextInt();
+        int[] arr = new int[a];
+        for (int i = 0; i < a; i++) {
+            arr[i] = s.nextInt();
+        }
+        int b = s.nextInt();
+        int[] narr = new int[b];
+        for (int i = 0; i < b; i++) {
+            narr[i] = s.nextInt();
+        }
+        Set<Integer> sw = new HashSet<>();
+        for (int ele : arr) {
+            sw.add(ele);
+        }
+        for (int ele : narr) {
+            sw.add(ele);
+        }
+        int sum = 0;
+        for (int ele : sw) {
+            sum += ele;
+        }
+        if (n * (n + 1) / 2 == sum) {
+            System.out.println("I become the guy.");
+        } else {
+            System.out.println("Oh, my keyboard!");
+        }
+    }
+}
