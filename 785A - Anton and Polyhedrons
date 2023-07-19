@@ -1,0 +1,22 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        int n = s.nextInt();
+        int count = 0;
+        while(n != 0){
+            String na = s.next();
+            if(na.equals("Tetrahedron")){count += 4;}
+            if(na.equals("Cube")){count += 6;}
+            if(na.equals("Octahedron" )){count += 8;}
+            if(na.equals("Dodecahedron")){count += 12;}
+            if(na.equals("Icosahedron")){count += 20;}
+            
+            n--;
+        }
+        System.out.println(count);
+        
+    }
+    
+}
