@@ -1,0 +1,28 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        int n = s.nextInt();
+        int p = 0, c = 0;
+        while(n != 0){
+            int a = s.nextInt();
+            if(a > -1){
+                p+=a;
+            }
+            else{
+                if(p == 0){
+                    c++;
+                }
+                else if(a == -1 && p > 0){
+                    p--;
+                }
+            }
+            
+            n--;
+        }
+        System.out.println(c);
+        
+    }
+    
+}
