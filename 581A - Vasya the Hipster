@@ -1,0 +1,14 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        int n = s.nextInt();
+        int a = s.nextInt();
+        int b = Math.min(n, a);
+        int c = (Math.max(n,a) - b) / 2;
+        System.out.println(b+ " " +c);
+        
+    }
+    
+}
