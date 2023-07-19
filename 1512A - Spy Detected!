@@ -1,0 +1,45 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int n = scanner.nextInt();
+        while (n != 0) {
+            int a = scanner.nextInt();
+            int[] arr = new int[a];
+            for (int i = 0; i < a; i++) {
+                arr[i] = scanner.nextInt();
+            }
+            Set<Integer> set = new HashSet<>();
+            for (int ele : arr) {
+                set.add(ele);
+            }
+            Integer[] narr = set.toArray(new Integer[set.size()]);
+            int s = 0, c = 0;
+            for (int i = 0; i < a; i++) {
+                if (narr[0] == arr[i]) {
+                    c++;
+                }
+                if (narr[1] == arr[i]) {
+                    s++;
+                }
+            }
+            if (s == 1) {
+                System.out.println(index(arr, narr[1]));
+            }
+            if (c == 1) {
+                System.out.println(index(arr, narr[0]));
+            }
+            n--;
+        }
+    }
+
+    public static int index(int[] arr, int el) {
+        for (int i = 0; i < arr.length; i++) {
+            if (el == arr[i]) {
+                return i + 1;
+            }
+        }
+        return -1; // If element not found
+    }
+}
