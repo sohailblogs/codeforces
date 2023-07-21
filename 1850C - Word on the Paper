@@ -1,0 +1,30 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        int n = s.nextInt(); 
+
+        for (int set = 0; set < n; set++) {
+            String[][] arr = new String[8][8]; 
+            for (int i = 0; i < 8; i++) {
+                String line = s.next(); 
+                arr[i] = line.split(""); 
+            }
+
+            for (int j = 0; j < 8; j++) {
+                StringBuilder word = new StringBuilder();
+                for (int i = 0; i < 8; i++) {
+                    if (!arr[i][j].equals(".")) {
+                        word.append(arr[i][j]);
+                    }
+                }
+                if (word.length() > 0) {
+                    System.out.println(word);
+                }
+            }
+        }
+
+        s.close(); 
+    }
+}
