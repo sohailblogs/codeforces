@@ -1,0 +1,22 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        String n = s.next();
+        String ne = s.next();
+        n = n.toLowerCase();
+        ne = ne.toLowerCase();
+        if(n.compareTo(ne) == 0){
+            System.out.println("0");
+        }
+        else if(n.compareTo(ne) < 0){
+            System.out.println("-1");
+        }
+        else{
+            System.out.println("1");
+        }
+        
+    }
+    
+}
